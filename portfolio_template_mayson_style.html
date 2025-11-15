@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Extra micro-styles to more closely match the clean, photographic portfolio look */
+    :root{--accent:#0f172a}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    .project-card{transition:transform .28s ease, box-shadow .28s ease}
+    .project-card:hover{transform:translateY(-6px)}
+    .hero-photo{object-fit:cover; width:100%; height:100%}
+  </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+  <!-- Top navigation -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-extrabold">Your Name</a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#work" class="hover:underline">Work</a>
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+      <button id="navToggle" class="md:hidden">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <section class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">Hi — I'm <span id="yourName" contenteditable="true">Your Name</span>.</h1>
+        <p class="mt-6 text-lg text-slate-600" contenteditable="true">I'm a visual designer and illustrator who creates brand identities, editorial projects and interactive experiences. Replace this with a short bio — edit any text directly in the file.</p>
+
+        <div class="mt-8 flex gap-4">
+          <a href="#work" class="inline-flex items-center px-5 py-3 border rounded-md text-sm font-medium">See my work</a>
+          <a href="#contact" class="inline-flex items-center px-5 py-3 bg-black text-white rounded-md text-sm font-medium">Hire me</a>
+        </div>
+      </div>
+
+      <div class="h-80 md:h-96 rounded-2xl overflow-hidden shadow-sm">
+        <!-- Replace the src below with your hero image. Prefer a high-res photo or portrait. -->
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1600&q=80&auto=format&fit=crop" alt="hero" class="hero-photo">
+      </div>
+    </section>
+
+    <!-- Projects grid -->
+    <section id="work" class="mt-16">
+      <div class="flex items-baseline justify-between">
+        <h2 class="text-3xl font-bold">Selected work</h2>
+        <p class="text-sm text-slate-500">Projects, case studies and commissions.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project card template: copy / paste to add more -->
+        <article class="project-card bg-white border rounded-2xl overflow-hidden shadow-sm">
+          <a href="#" class="block">
+            <div class="aspect-[4/3] bg-slate-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1520975915194-9c5b9eecd1d8?w=1200&q=80&auto=format&fit=crop" alt="Project image" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold">Project title</h3>
+              <p class="mt-2 text-sm text-slate-500">Short project description. Edit this text freely.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card bg-white border rounded-2xl overflow-hidden shadow-sm">
+          <a href="#" class="block">
+            <div class="aspect-[4/3] bg-slate-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&auto=format&fit=crop" alt="Project image" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold">Project title</h3>
+              <p class="mt-2 text-sm text-slate-500">Short project description. Edit this text freely.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card bg-white border rounded-2xl overflow-hidden shadow-sm">
+          <a href="#" class="block">
+            <div class="aspect-[4/3] bg-slate-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=1200&q=80&auto=format&fit=crop" alt="Project image" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold">Project title</h3>
+              <p class="mt-2 text-sm text-slate-500">Short project description. Edit this text freely.</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- add more cards as needed -->
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="mt-20 grid md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-2">
+        <h2 class="text-2xl font-bold">About</h2>
+        <p class="mt-4 text-slate-600" contenteditable="true">A longer bio goes here. Explain your approach, your tools, clients you have worked with, and anything that helps potential clients understand you. This text is editable directly inside the file.</p>
+
+        <ul class="mt-6 grid grid-cols-2 gap-4 text-sm text-slate-500">
+          <li><strong>Services</strong><br>Branding, Editorial, Web design</li>
+          <li><strong>Location</strong><br>City, Country</li>
+          <li><strong>Contact</strong><br><a href="mailto:you@example.com" class="text-slate-600">you@example.com</a></li>
+          <li><strong>Availability</strong><br>Open for freelance</li>
+        </ul>
+      </div>
+
+      <aside class="p-6 bg-slate-50 rounded-2xl">
+        <h3 class="font-semibold">Quick facts</h3>
+        <p class="mt-2 text-sm text-slate-600">Years of experience, selected clients, tools or a short quote.</p>
+      </aside>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mt-20 bg-slate-50 p-8 rounded-2xl">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold">Get in touch</h2>
+        <p class="mt-2 text-sm text-slate-600">I'm available for freelance work and collaborations. Replace the email below with yours.</p>
+        <div class="mt-6 flex gap-4">
+          <a href="mailto:you@example.com" class="inline-flex items-center px-5 py-3 border rounded-md">you@example.com</a>
+          <a href="#" class="inline-flex items-center px-5 py-3 bg-black text-white rounded-md">Message</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-12 text-center text-sm text-slate-500 pb-12">© <span id="footerName">Your Name</span>. Built with ♥ — edit this file to personalize.</footer>
+  </main>
+
+  <script>
+    // Small script to make contenteditable placeholders clearer
+    document.querySelectorAll('[contenteditable]').forEach(el=>{
+      el.addEventListener('focus', ()=> el.classList.add('ring','ring-slate-200','rounded-sm'))
+      el.addEventListener('blur', ()=> el.classList.remove('ring','ring-slate-200','rounded-sm'))
+    })
+
+    // Simple mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    navToggle.addEventListener('click', ()=>{
+      const nav = document.querySelector('header nav');
+      if(nav.style.display==='flex') nav.style.display='none'; else nav.style.display='flex';
+    })
+
+    // Helpful comment: to change the hero image, replace the hero <img> src attribute with your image URL.
+    // To add projects: copy one <article class="project-card"> block and paste; swap images and text.
+  </script>
+</body>
+</html>
